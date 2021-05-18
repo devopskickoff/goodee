@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 650px;
+        }
+    </style>
+</head>
+<body>
+    <p id="summary">이것은 col관련 내용입니다.</p>
+    <table border="1" aria-describedby="summary">
+        <col style="width:10%;background-color: aqua;">
+        <!-- <col style="width:40%;background-color: aquamarine;">
+        <col style="width:40%;background-color:brown;"> -->
+        <colgroup span="2" style="width:40%;background-color: aquamarine;"></colgroup>
+        <col>
+        <tr>
+            <td>A</td>
+            <td>B</td>
+            <td>C</td>
+            <td>D</td>
+        </tr>
+        <tr>
+            <td>E</td>
+            <td>F</td>
+            <td>G</td>
+            <td>H</td>
+        </tr>
+    </table>
+</body>
+</html>
