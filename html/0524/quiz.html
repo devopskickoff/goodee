@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main_header {
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .fourth_container {
+            display: flex;
+            justify-content: left;
+        }
+        .inner-box {
+            width:200px;
+            height: 70px;
+            background-color: silver;
+            margin: 10px;
+            text-align: center;
+            line-height: 70px;
+        }
+
+        .p1 {
+            font-size: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="main_container">
+        <div class="main_header">Menu examples</div>
+        <div class="second_container">
+            <div class="third_container">
+                <h2>A menu with navigation links</h2>
+                <div class="fourth_container">
+                    <div class="inner-box">HOME</div>
+                    <div class="inner-box">About Us</div> 
+                    <div class="inner-box">Product</div>
+                </div>
+                <p class="p1">VoiceOver will announce the above as links, e.g. "Home, link".</p>
+            </div>
+        </div>
+        <div class="third_container">
+            <h2>A menu with role=menu</h2>
+            <div class="fourth_container">
+                <div class="inner-box">HOME</div>
+                <div class="inner-box">About Us</div> 
+                <div class="inner-box">Product</div>
+            </div>
+            <p class="p1">In the role=menu example, VoiceOver on Mac/iOS will announce "Home, menu item" and after a pause "You are currently on a menu item [...] To close this menu, press Escape".</p>
+        </div>
+        <div class="third_container">
+            <h2>More on the subject</h2>
+            <ul>
+                <li><a href="#">Article on Inclusive Components</a></li>
+                <li><a href="#">W3C ARIA menu specification with expected keyboard etc behaviours</a></li>
+                <li><a href="#">Working example of navigation menu using role=menu</a></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
