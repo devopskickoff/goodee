@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 180px;
+            border: 1px solid black;
+        }
+        /* relative는 static기준 top left를 따라서 움직인다 */
+        /* .cls1{
+            position: relative;
+            top: 50px;
+            left: 50px;
+            background-color: aqua;
+        } */
+
+        /* absolute 본인이 static이었던 위치를 무시한다 자신의 부모가 static이 아닌애를 찾아간다 
+        찾다찾다 없으면 바디를 기준으로 사라진다, 찾던 와중에 position:relative를 찾게되면 그걸 기준으로 따라간다
+        아래의 박스가 설정이 없으면 사라져버림 부모박스까지 다 무시해버림 */
+        /* .cls1{
+            position: absolute;
+            top:500px;
+            left: 500px;
+            background-color: aqua;
+        } */
+
+        .cls1{
+            position: absolute;
+            top:500px;
+            left: 500px;
+            background-color: aqua;
+        }
+        .cls2{
+            background-color: black;
+        }
+        .cls3{
+            background-color: yellow;
+        }
+        .container {
+            width: auto;
+            height: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="cls1">박스1</div>
+    <div class="cls2">박스2</div>
+    <div class="cls3">박스3</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .modal {
+            display: none;
+            /* 무조건 포지션은 fixed */
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+        }
+
+        
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci enim excepturi, veritatis aliquam vero ratione ab ipsa quam impedit omnis. Repellendus explicabo vel similique rerum. Soluta rerum odit laborum perspiciatis?</p>
+    <button id="md" onclick="javascript:openModal();">모달창팝업</button>
+    <div class="modal">
+        이것은 모달창입니다.
+    </div>
+
+    <script>
+        function openModal(){
+            document.querySelector(".modal").style.display = "inline-block";
+            // document.querySelector(".modal").style.position = "absolute";
+        }
+    </script>
+</body>
+</html>

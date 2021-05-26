@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .multi {
+            column-width: 150px;
+            column-count: 3;
+            column-gap: 50px;
+            column-rule-width: 5px;
+            column-rule-style: dashed;
+            column-rule-color: red;
+        }
+        b {
+            break-before: column;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>건강에 좋은 식품</h2>
+    </div>
+    <div class="multi">
+        <p><b>코코넛오일</b>: Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum ratione ut natus pariatur, consequatur dolor est id soluta accusamus sed, repellat, adipisci eaque quae eligendi dolorum praesentium repellendus ullam aliquid?</p>
+        <p><b>블루베리</b>: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit praesentium et aliquam explicabo soluta aliquid nemo possimus quia! Placeat, fugit! Magni at deserunt libero harum. Ea nulla blanditiis voluptates iusto.</p>
+        <p><b>아몬드</b>: Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi illo suscipit quos voluptate voluptatibus soluta reiciendis eius fugit magnam deserunt repudiandae, molestiae libero aliquid corrupti, quod numquam aut quam aliquam.</p>
+    </div>
+</body>
+</html>

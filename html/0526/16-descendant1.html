@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 모든태그 */
+        /* #container ul {
+            border: 1px dotted blue;
+        } */
+
+        /* 자손선택자 */
+        #container > ul {
+            border: 1px dotted blue;
+        }
+
+        /* 인접형제 선택자 */
+        /* h1+p {color:blue; font-weight:bold;} */
+        /* h1 ~ p {color: blue;} */
+        /* 속성선택자 */
+        /* p태그의 속성에 alt가 있으면 */
+        /* p[alt="abc"] {
+            color: red;
+        } */
+        /* p[class="abc"]{color: green;} */
+        /* p의 클래스 중 많은 값 중 하나가 abc면 */
+        /* p[class ~= "abc"] {color: yellow} */
+        /* 클래스의 값중 bcd가 맨 앞에 있으면 */
+        /* p[class |= "bcd"] {color:aqua}; */
+        /* p의 타이틀이 us로 시작하면 */
+        /* p[title |="us"]{color:chocolate}; */
+        /* us가 접두어일때 */
+        p[title ^= "us"]{color: darkgreen};
+        /* 접미어일때 */
+        p[title $= "my"]{background-color: yellow; }
+        /* 어디든 포함일때 */
+        p[class *= "d"]{font-size: 2em};
+    </style>
+</head>
+
+<body>
+    <section id="container">
+        <header>
+            <p>더 자세한 내용은 홈페이지 참조</p>
+            <h1>예약 방법 및 요금</h1>
+            <p class="abc bdc" title="us-eng">더 자세한 내용은 홈페이지 참조</p>
+            <p class="bcd" title="usarmy">더 자세한 내용은 홈페이지 참조</p>
+            <p class="def">더 자세한 내용은 홈페이지 참조</p>
+        </header>
+        <ul>
+            <li>예약방법
+                <ul>
+                    <li>직접 통화</li>
+                    <li>문자 남기기</li>
+                </ul>
+            </li>
+            <li>요금
+                <ul>
+                    <li>1인: 40000원</li>
+                    <li>2인: 60000원</li>
+                    <li>3인: 80000원</li>
+                    <li>4인: 100000원</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+</body>
+
+</html>
