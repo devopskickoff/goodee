@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: flex;
+        }
+        #newsletter {
+            display: flex;
+            height: 70px;
+            background-color: #35424a;
+            margin: auto;
+        }
+        header > .container {
+            background-color: #35424a;
+            height: 70px;
+            border-bottom: 3px solid tomato;
+            align-items: center;
+        }
+        .left_header {
+            font-size: 2em;
+            color: white;
+            width: 60%;
+            margin-left: 40px;
+        }
+        .orange {
+            color: tomato;
+        }
+        .right_header {
+            margin: 20px;
+            color: white;
+        }
+        #showcase {
+            height: 400px;
+            text-align: center;
+            background-color: rgb(231, 231, 231);
+            padding: 10px;
+        }
+        .show_container {
+            text-align: center;
+            color: white;
+            
+        }
+        .show_container .header {
+            font-size: 3em;
+            font-weight: bold;
+        }
+        .show_container .main {
+            font-size: 1.5em;
+        }
+        .left_section {
+            font-size: 1.5em;
+            color: white;
+            margin-left: 10px;
+            margin: 15px;
+        }
+        .right_section {
+            margin-top: 20px;
+            margin-left: 43%;
+        }
+        button {
+            background-color: tomato;
+            border-radius: 0;
+        }
+        .boxes {
+            display: flex;
+            width: 80%;
+            justify-content: center;
+            margin: auto;
+            height: 200px;
+            text-align: center;
+            padding: 70px;
+            
+        }
+        .box {
+            top: 50%;
+            left: 50%;
+            width: 30%;
+        }
+
+        footer{
+            height: 70px;
+            text-align: center;
+            background-color: tomato;
+            padding: 20px 0;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="left_header"><span class="orange">Sample</span> Web Design</div>
+            <div class="right_header">HOME</div>
+            <div class="right_header">ABOUT</div>
+            <div class="right_header">SERVICES</div>
+        </div>
+    </header>
+    <section id="showcase">
+        <div class="show_container">
+            <p class="header">Sample Web Design</p>
+            <p class="main">Suspendisse quis nibh quis nisl eleifend sagittis eu id augue. 
+                Pellentesque consectetur, libero ut fringilla vulputate, ex massa faucibus est, 
+                sit amet lobortis nisl magna in massa.</p>
+        </div>
+    </section>
+
+    <section id="newsletter">
+        <div class="left_section">Subscribe to our Newsletter</div>
+        <div class="right_section">
+            <input type="email" placeholder="Enter email...">
+            <button type="submit">Subscribe</button>
+        </div>     
+    </section>
+    <section>
+        <div class="boxes">
+            <div class="box">
+                <h3>HTML5 Markup</h3>
+                <p>Suspendisse quis nibh quis nisl eleifend sagittis eu id augue.</p>
+            </div>
+            <div class="box">
+                <h3>CSS3 Styling</h3>
+                <p>Suspendisse quis nibh quis nisl eleifend sagittis eu id augue.</p>
+            </div>
+            <div class="box">
+                <h3>JavaScript</h3>
+                <p>Suspendisse quis nibh quis nisl eleifend sagittis eu id augue.</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>Sample Web Design © 2019</p>
+    </footer>
+</body>
+</html>
