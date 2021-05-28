@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="default.css">
+    <style>
+        .flex-container {
+            /* flex-container 높이가 늘어나면 그 안에 item들도 늘어난다 */
+            display: flex;
+            height: 300px;
+            /* align-items: center;
+            justify-content: center; */
+            /* 하나의 큰 아이템에 자동정렬 되게 하는 것 */
+            align-items: baseline;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item" style="padding: 20px;font-size:40px;">AAAAAAAAAAAAAAAAAAAAA</div>
+        <div class="flex-item">BBBBB</div>
+        <div class="flex-item">CCCCCCCC</div>
+    </div>
+</body>
+</html>
