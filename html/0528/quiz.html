@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,87 +12,206 @@
             .main-item1 {
                 display: flex;
             }
-            .main-item-inner{
+
+            .main-item-inner {
                 width: 50%;
             }
-            
-        }
-        @media screen and (max-width: 650px){
-            .main-item1{
-                display:block;
+
+            .first_img {
+                display: none;
             }
-            .main-item-inner{
+
+            .second_img {
+                display: none;
+            }
+
+            .third-img {
+                display: none;
+            }
+
+        }
+
+        @media screen and (max-width: 650px) {
+            .main-item1 {
+                display: block;
+            }
+
+            .main-item-inner {
                 width: 100%;
             }
         }
+
         nav {
             display: flex;
             height: 50px;
             border: 1px solid black;
             background-color: black;
             color: white;
+            justify-content: left;
+            align-items: center;
 
         }
+
+        .nav-item {
+            margin: 1em;
+        }
+
         .main-header-img {
-            height: 600px;
+            height: 30em;
             background-image: url("img/header.jpg");
             background-size: cover;
         }
+
         .main-container {
             display: block;
         }
+
         .main-item-inner {
             width: 100%;
-            border: 1px solid black;
-            height: 500px;        
+            border: 1px dashed rgb(99, 98, 98);
+            height: 20em;
+            justify-content: center;
         }
+
         .main-item2 {
             width: 100%;
-            border: 1px solid black;
-            height: 500px;
+            border: 1px dashed rgb(99, 98, 98);
+            height: 20em;
         }
+
         footer {
             width: 100%;
             height: 100px;
             background-color: black;
         }
-        #first_img {
-            position: inherit;
-            width: 200px;
-            height:200px;
+
+        .first_img {
+            width: 300px;
+            height: 200px;
             background-image: url("img/coffee.jpg");
-            border: 1px solid black;
+
+        }
+
+        .second_img {
+            width: 300px;
+            height: 200px;
+            background-image: url("img/map.jpg");
+
+        }
+
+        .third-img {
+            width: 300px;
+            height: 200px;
+            background-image: url("img/ice.jpg");
+            border-radius: 50%;
+        }
+
+        .inner-content {
+            display: flex;
+            text-align: left;
+            justify-content: center;
+
+        }
+
+        .inner-content>div {
+            padding: 2em;
+            width: 300px;
+        }
+
+        .inner-header {
+            font-size: 1.5em;
+            padding-left: 2em;
+            padding-top: 1em;
+            padding-bottom: 1em;
+        }
+
+        .main-item-inner2 {
+            background-color: silver;
+        }
+        .third-content >div:nth-child(1){
+            width: 60%;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <header>
             <nav>
                 <div class="nav-item">
-                    <h1>카페소개</h1>
-                    <!-- <div id="first_img"></div> -->
+                    <div>카페소개</div>
                 </div>
                 <div class="nav-item">
-                    <h1>오시는길</h1>
+                    <div>오시는길</div>
                 </div>
                 <div class="nav-item">
-                    <h1>이달의 추천</h1>
+                    <div>이달의 추천</div>
                 </div>
             </nav>
             <div class="main-header-img">
             </div>
         </header>
-       <div class="main-container">
-           <div class="main-item main-item1">
-               <div class="main-item-inner">카페소개</div>
-               <div class="main-item-inner">오시는길</div>
-           </div>
-           <div class="main-item main-item2">이달의추천</div>
-       </div>
+        <div class="main-container">
+            <div class="main-item main-item1">
+                <div class="main-item-inner main-item-inner1">
+                    <div class="inner-header">
+                        <p>카페 소개</p>
+                    </div>
+                    <div class="inner-content">
+                        <div class="first_img">
+                        </div>
+                        <div class="first_article">
+                            <p>영업시간: 오전 9시~밤10시</p>
+                            <p>휴무: 매주 수요일 (수요일이 공휴일일 경우 수요일 영업 다음날 휴무)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-item-inner main-item-inner2">
+                    <div class="inner-header">
+                        <p>오시는 길</p>
+                    </div>
+                    <div class="inner-content">
+                        <div class="second_img">
+                        </div>
+                        <div class="second_article">
+                            <p>서귀포 안덕면 사계리 0000-000</p>
+                            <p>제주 올레 10코스 산방산 근처</p>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="main-item main-item2">
+                <div class="inner-header">
+                    이달의 추천
+                </div>
+                <div class="inner-content third-content">
+                    <div class="third-article">
+                        <ul> 핸드드립 아이스커피
+                            <li>
+                                1. 1인분 기준으로 서버에 각얼음 5조각(한조각의 20cc)넣고 추출을 시작한다
+                            </li>
+                            <li>2.평상시보다 원두의 양은 2배 정도 (20g)와 추출액은 얼음 포함해서 200cc까지 내린다
+                            </li>
+                            <li>
+                                3.아이스 잔에 얼음 6~7개 섞어서 시원하게 마신다
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="third-img">
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
     <footer>
         <div>My times with Coffee</div>
     </footer>
 </body>
+
 </html>
