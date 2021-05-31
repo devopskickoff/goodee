@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/default.css">
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            /* grid-template-rows: repeat(3,100px); */
+            /* 최소 높이 맞추기 */
+            grid-template-rows: repeat(3, minmax(100px,auto));
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde omnis quod eum porro officiis excepturi sit nemo voluptas atque dolorum dolore ab corrupti earum, facere fugiat recusandae eaque! Officiis, quis?</div>
+        <div class="grid-item">B</div>
+        <div class="grid-item">C</div>
+        <div class="grid-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni dicta corrupti minus minima modi nesciunt ratione iusto praesentium unde voluptas quisquam tempora reprehenderit vero, aliquam, quidem ipsa quod necessitatibus itaque.</div>
+        <div class="grid-item">E</div>
+        <div class="grid-item">F</div>
+        <div class="grid-item">G</div>
+        <div class="grid-item">H</div>
+        <div class="grid-item">I</div>
+    </div>
+</body>
+</html>

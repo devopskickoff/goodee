@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/default.css">
+    <style>
+        /* point flex-shrink */
+        .flex-container {
+            display: flex;
+        }
+        .flex-item {
+            flex: 1 1 auto;
+        }
+        .flex-item:nth-child(1) {
+            flex-shrink: 0;
+            width: 200px;
+        }
+        .flex-item:nth-child(2) {
+            flex-grow:1;
+            /* 아래를 추가하면 줄어들지 않음 */
+            /* flex-shrink: 0; */
+        }
+        .flex-item:nth-child(3) {
+            /* 줄어들지 않게 설정 flex-basis (가로)보다 줄어들지 않게 */
+            flex-shrink: 0;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ab dolorum, harum, atque blanditiis, incidunt omnis corrupti esse aperiam fuga placeat possimus doloremque reiciendis nam ea? Quisquam non eveniet error consectetur.</div>
+        <div class="flex-item">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos, molestiae maiores itaque iste dolore fugit ipsa facilis? Eos voluptates adipisci iste perferendis placeat ratione commodi hic, quibusdam doloribus, tempore facilis.</div>
+        <div class="flex-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, veritatis laudantium! Eligendi perferendis perspiciatis, sapiente et repellendus, harum a, numquam deserunt molestiae praesentium cupiditate laudantium voluptate magni quibusdam neque non!</div>
+    </div>
+</body>
+</html>
