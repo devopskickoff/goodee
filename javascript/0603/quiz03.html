@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var width = prompt("가로값");
+        var height = prompt("세로값");
+        var background_color = prompt("배경색");
+
+        document.write(`<div style="width:${width}px;height:${height}px;background-color:${background_color}">
+        <div style="width:${width/2}px;height:${height/2}px;background-color:red;margin:auto;"></div></div>`);
+        console.log(typeof(width));
+    </script>
+</body>
+</html>
