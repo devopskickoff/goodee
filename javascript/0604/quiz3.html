@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="radio" name="answer" value="1">1번<br>
+    <input type="radio" name="answer" value="2">2번<br>
+    <input type="radio" name="answer" value="3">3번<br>
+    <input type="radio" name="answer" value="4">4번<br>
+    <input type="submit" id="check" value="click">
+    <div id="result"></div>
+
+    <script>
+        var correctAnswer = 1;
+        var matchingAnswer = 0;
+        var result = document.getElementById("result");
+        document.getElementById("check").onclick = function(){
+            var answer = document.getElementsByName("answer");
+            for(var i = 0; i < answer.length; i++){
+                if(answer[i].checked==true){
+                    matchingAnswer = Number(answer[i].value);
+                }
+            }
+            if(correctAnswer == matchingAnswer){
+                result.innerHTML = "맞다";
+            }else {
+                result.innerHTML = "틀리다";
+            }
+        }
+    </script>
+</body>
+</html>

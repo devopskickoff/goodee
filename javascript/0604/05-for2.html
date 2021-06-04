@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 테이블
+        1.tr td가 유동적으로 늘어나야한다
+        2.각각에 td에 들어가는 값은 위치에 따라 달라야 한다 => index값 출력
+    -->
+    <input type="text" id="val1" name="val1"><br>
+    <input type="text" id="val2" name="val2"><br>
+    <button id="create">생성</button>
+    <div id="table">
+    </div>
+    <script>
+        document.querySelector("#create").addEventListener("click", function () {
+            var val1 = document.querySelector("#val1").value;
+            var val2 = document.querySelector("#val2").value;
+        
+            var result = "<table>";
+            
+            for(var i = 0; i < val1; i++){
+                result += "<tr>";
+                for(let j = 0; j< val2; j++){
+                    result += `<td>${i}_${j}</td>`
+                }
+                result += "</tr>";
+            }
+            result += "</table>";
+            document.getElementById("table").innerHTML = result;
+
+        }, false);
+
+
+    </script>
+</body>
+
+</html>

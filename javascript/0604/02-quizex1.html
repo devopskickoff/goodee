@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="abc"></div>
+    <script>
+        // text만 갖고오는 방법
+        // document.getElementById("abc").innerText = "안녕하세요";
+        // html요소까지 다 가져오는 것 (가장 많이 사용됨 그러나 보안상의 문제로 생각해 create element로 사용하기도 함)
+        // document.getElementById("abc").innerHTML = "안녕하세요";
+        document.getElementById("abc").textContent = "반갑습니다";
+    </script>
+</body>
+</html>

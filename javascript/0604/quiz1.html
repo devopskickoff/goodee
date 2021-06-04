@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="val1">
+    <button id="cal">클릭</button>
+    <div id="result"></div>
+    <script>
+        document.getElementById("cal").onclick = function(){
+            var val1 = Number(document.getElementById("val1").value);
+            document.getElementById("result").innerHTML = 
+            `${(val1==0)?"해당 값은 0":(val1>0)?"해당 값은 양수":"해당 값은 음수"}입니다`;
+        }
+    </script>
+</body>
+</html>
