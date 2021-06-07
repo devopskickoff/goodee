@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="content">
+        <p>기존 텍스트</p>
+    </div>
+
+    <script>
+        // document.getElementById("content").innerHTML = "<p>새로운 텍스트</p>"
+        var p1 = document.createElement("p");
+        var t2 = document.createTextNode("새로운 텍스트1");
+        var p1 = document.createElement("p");
+        var t2 = document.createTextNode("새로운 텍스트2");
+        p1.append(t1);
+        p2.append(t2);
+        document.getElementById("content").append(p1,p2);
+        // document.getElementById("content").append(p);
+        // document.getElementById("content").prepend(p);
+    </script>
+</body>
+</html>

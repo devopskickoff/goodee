@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    답1<input type="radio" name="answer" id="v1" value="1">
+    답2<input type="radio" name="answer" id="v2" value="2">
+    답3<input type="radio" name="answer" id="v3" value="3">
+    답4<input type="radio" name="answer" id="v4" value="4">
+    <button id="click">채점</button>
+    <script>
+        var rightAnswer = 3;
+        document.querySelector("#click").addEventListener("click", function () {
+            var el = document.getElementsByName("answer");
+            console.dir(el);
+
+        }, false);
+    </script>
+</body>
+
+</html>

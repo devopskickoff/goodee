@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<h2>Finding HTML Elements Using document.documentElement</h2>
+
+	<p id="demo"></p>
+
+	<script type="text/javascript">
+    // innerHtml하면 원하는대로 제대로 안나옴
+		var el = document.getElementById("demo");
+        el.innerText = document.documentElement.innerHTML;
+	</script>
+</body>
+</html>

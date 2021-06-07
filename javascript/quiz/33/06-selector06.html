@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>CSS 선택자를 이용한 선택</h1>
+    <p class="odd">첫 번째 단락이에요!</p>
+    <ul>
+		<li class="odd">첫 번째 아이템이에요!</li>
+		<li>두 번째 아이템이에요!</li>
+		<li class="odd">세 번째 아이템이에요!</li>
+		<li>네 번째 아이템이에요!</li>
+		<li class="odd">다섯 번째 아이템이에요!</li>
+	</ul>
+
+    <script>
+        // querySelectorAll로 구체적인 클래스나 선택자를 입력 할 수 있다.
+        // querySelector의 경우 담아온 변수.item(i) 로 사용한다.중요!
+        var el = document.querySelectorAll("li.odd");
+        for(var i = 0; i < el.length; i++){
+            el.item(i).style.color = 'red';
+        }
+    </script>
+</body>
+</html>

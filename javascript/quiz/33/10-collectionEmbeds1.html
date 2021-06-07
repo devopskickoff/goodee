@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<embed src="helloworld.swf">
+	<embed src="helloworld.swf">
+
+	<p>Click the button to display the number of embed elements there are in this document.</p>
+
+	<button onclick="myFunction()">Try it</button>
+
+	<p id="demo"></p>
+
+	<script type="text/javascript">
+		function myFunction() {
+		  var x = document.embeds.length;
+		  document.getElementById("demo").innerHTML = x;
+		}
+	</script>
+</body>
+</html>

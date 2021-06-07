@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- select option, checkbox, radio -->
+    <ul>
+        <li>
+            <lable for="v1">버튼1<input type="radio" name="ex1" id="v1" value="1"></lable>
+        </li>
+        <li>
+            <lable for="v2">버튼2<input type="radio" name="ex2" id="v2" value="2"></lable>
+        </li>
+        <li>
+            <lable for="v3">버튼3<input type="radio" name="ex3" id="v3" value="3"></lable>
+        </li>
+        <li>
+            <lable for="v4">버튼4<input type="radio" name="ex4" id="v4" value="4"></lable>
+        </li>
+    </ul>
+    <button id="click">클릭</button>
+    <script>
+        // document.getElementById("click").addEventListener("click",function(){
+        //     var list = document.querySelectorAll('input[type="radio"]');
+        //     for (let i = 0; i < list.length; i++){
+        //         if(list[i].checked){
+        //             alert(list[i].value);
+        //         }
+        //     }
+        // },false);
+        document.querySelectorAll('input[type="radio"]')[0].addEventListener("change", function () {
+            var list = document.querySelectorAll('input[type="radio"]');
+            for (let i = 0; i < list.length; i++) {
+                if (list[i].checked) {
+                    alert(list[i].value);
+                }
+            }
+        }, false);
+    </script>
+</body>
+
+</html>

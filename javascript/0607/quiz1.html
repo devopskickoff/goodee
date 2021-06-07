@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="telephone" id="telephone">
+        <option value="010">010</option>
+        <option value="011">011</option>
+        <option value="032">032</option>
+        <option value="02">02</option>
+        <option value="052">052</option>
+    </select>
+    <div id="content"></div>
+    <script>
+        document.getElementById("telephone").addEventListener('change',function(){
+            var el = document.getElementById("content");
+            el.innerText = document.getElementById("telephone").value;
+        },false);
+    </script>
+</body>
+</html>
