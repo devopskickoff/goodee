@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #content {
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            display: none;
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.3);
+
+        }
+
+        #modal {
+            width: 500px;
+            height: 300px;
+            background-color: white;
+            margin: auto;
+            border-radius: 30px;
+            align-items: center;
+            display: flex;
+            margin: auto;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <button id="btn">버튼클릭</button>
+        <div id="content">
+            <div id="modal">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit maxime, necessitatibus repellendus,
+                    est
+                    alias laudantium similique officiis animi quibusdam amet nisi iste tempore reprehenderit dicta?
+                    Voluptatibus deserunt possimus et quam.
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("btn").addEventListener("click", function () {
+            var content = document.getElementById("content");
+            content.style.display = "flex";
+        });
+    </script>
+</body>
+
+</html>

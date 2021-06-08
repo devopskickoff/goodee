@@ -21,6 +21,7 @@
         var checkedAnswer = 0;
         document.getElementById("click").onclick = function () {
             var answer = document.getElementsByName("answer");
+            console.log(typeof answer);
             var content = document.getElementById("content");
             for(var i = 0; i < answer.length; i++){
                 if(answer[i].checked==true){

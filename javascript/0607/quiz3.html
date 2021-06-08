@@ -9,40 +9,55 @@
 </head>
 
 <body>
-    <input type="checkbox" name="answer" value="1">1번<br>
-    <input type="checkbox" name="answer" value="2">2번<br>
-    <input type="checkbox" name="answer" value="3">3번<br>
-    <input type="checkbox" name="answer" value="4">4번<br>
-    <input type="checkbox" name="answer" value="5">5번<br>
+    <input type="checkbox" name="answer" class="doc" value="1">1번<br>
+    <input type="checkbox" name="answer" class="doc" value="2">2번<br>
+    <input type="checkbox" name="answer" class="doc" value="3">3번<br>
+    <input type="checkbox" name="answer" class="doc" value="4">4번<br>
+    <input type="checkbox" name="answer" class="doc" value="5">5번<br>
     <button id="click">채점</button>
     <div id="content"></div>
     <script>
 
-        var collectAnswer = [1, 3];
-        var result = "";
+        var collectAnswer = "13";
+        
         document.getElementById("click").onclick = function () {
+            var matchingAnswer = "";
             var content = document.getElementById("content");
-            var answer = document.getElementsByName("answer");
-            var arr = [];
-            for (var i = 0; i < answer.length; i++) {
-                if (answer[i].checked == true) {
-                    arr.push(answer[i].value);
+            document.querySelectorAll(".doc").forEach( element => {
+                if(element.checked){
+                    matchingAnswer += element.value;
                 }
-            }
-            if (arr.length == collectAnswer.length) {
-                console.log("길이같음");
-                for (var j = 0; j < collectAnswer.length; j++) {
-                    console.log(arr[j]);
-                    if (arr[j] != collectAnswer[j]) {
-                        result = "다르다";
-                        break;
-                    }
-                    result = "같다";
-                }
+            });
+            
+            if(collectAnswer==matchingAnswer){
+                content.innerHTML = "맞습니다";               
             } else {
-                result = "다르다";
+                content.innerHTML = "틀렸습니다";
             }
-            content.innerHTML = result;
+            
+            
+            // var content = document.getElementById("content");
+            // var answer = document.getElementsByName("answer");
+            // var arr = [];
+            // for (var i = 0; i < answer.length; i++) {
+            //     if (answer[i].checked == true) {
+            //         arr.push(answer[i].value);
+            //     }
+            // }
+            // if (arr.length == collectAnswer.length) {
+            //     console.log("길이같음");
+            //     for (var j = 0; j < collectAnswer.length; j++) {
+            //         console.log(arr[j]);
+            //         if (arr[j] != collectAnswer[j]) {
+            //             result = "다르다";
+            //             break;
+            //         }
+            //         result = "같다";
+            //     }
+            // } else {
+            //     result = "다르다";
+            // }
+            // content.innerHTML = result;
         }
     </script>
 </body>

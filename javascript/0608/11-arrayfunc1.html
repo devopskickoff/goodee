@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // pop : 맨 끝의 요소를 삭제하고 일반변수로 반환한다
+        var ex2 = ['a', 'b', 'c'];
+        var a = ex2.pop(); 
+        console.log(ex2); // [a,b]
+        console.log(a); // 'c'
+       //shift : 맨앞의 요소를 삭제하고 일반변수로 반환한다
+        var ex3 = ['a', 'b', 'c'];
+        var b = ex3.shift();
+        console.log(ex3);// [b,c]
+        console.log(b);//'a'
+
+        //concat : 두개의 배열을 하나로 합친다
+        var ex4 = ['a','b','c'];
+        var ex5 = ['d','e','f'];
+        var result1 = ex4.concat(ex5);
+        console.log(result1);
+
+        //join : 요소 사이에 구분자를 넣어 문자열로 출력시키는 함수
+        var ex6 = ['a','b','c'];
+        ex6 = ex6.join("/");
+        console.log(ex6);
+
+        //reverse : 반전 / 새로운 값을 반환하는게 아니라 스스로가 바껴버림
+        var ex7 = ['a','b','c'];
+        ex7.reverse();
+        console.log(ex7);
+
+        //sort : 정렬 /자기자신이 변한다
+        var ex8 = [4,3,1,5,2];
+        ex8.sort();
+        console.log(ex8);
+
+        var ex9 = ['나','가','다','라'];
+        ex9.sort();
+        console.log(ex9);
+
+        //slice : 배열의 일부분을 잘라낸다. 0부터 3개까지만.
+        var ex10 = [1,2,3,4,5];
+        var ex11 = ex10.slice(0,3);
+        console.log(ex10); //1,2,3,4,5
+        console.log(ex11);//1,2,3
+
+        //splice: 배열의 일부분을 잘라내서 두개의 배열로 만드는 함수
+        var ex12 = ["c","b","a","d"];
+        var ex13 = ex12.splice(1,2);
+        console.log(ex12); //c,d ex12에서 인덱스 1부터 2개 잘라진것
+        console.log(ex13); //b,a 1,2까지 잘라낸것
+
+
+    </script>
+</body>
+
+</html>

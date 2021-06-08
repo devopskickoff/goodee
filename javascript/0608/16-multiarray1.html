@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // var arr1 = [[1,2],[3,4],[5,6]];
+        // var arr2 = [new Array(2),new Array(2),new Array(2)];
+        // var arr3 = [[,],[,],[,]];
+        // var arr4 = [[[,],[,]]];
+        // var arr5 = [[1,2,3,],[4,5,6,7],[7,8,9,9]];
+        // for(let i = 0; i < arr5.length; i++){
+        //     for(let j =0; j < arr5[i].length; j++){
+        //         console.log(arr5[i][j]);
+        //     }
+        // }
+
+        var arr7 = [{ a: "123", b: "456" }, [1, 2, 3], [[4, 5, 6], { c: "789" }]];
+        // for in 객체, 배열 둘 다 사용가능
+
+        for (let key1 in arr7) {
+            if (typeof arr7[key1] == 'object') {
+                for (let key2 in arr7[key1]) {
+                    console.log(typeof arr7[key1][key2]);
+                }
+            } else {
+                console.log(arr7[key1]);
+            }
+        }
+    </script>
+</body>
+
+</html>
