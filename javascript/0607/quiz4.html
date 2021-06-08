@@ -12,23 +12,18 @@
     <input type="number" id="count">
     <button id="create">생성</button>
     <ol id="list" style="list-style: circle;"></ol>
-
     <script>
-        // document.getElementById("create").addEventListener("click", function () {
-        //     var count = document.getElementById("count").value;
-        //     var listLength = document.querySelectorAll("ol#list > li").length;
-
-        //     if(listLength ==0){
-        //         listLength +1;
-        //     }
-        //     for (var i = listLength; i < listLength+count; i++) {
-        //         var p1 = document.createElement("li");
-        //         var t1 = document.createTextNode("텍스트"+i);
-        //         p1.append(t1);
-        //         document.getElementById("list").append(p1);
-        //     }
-        // });
-        
+        document.getElementById("create").addEventListener("click",function(){
+            var count = document.getElementById("count").value;
+            var ol = document.getElementById("list");
+            for(var i = 0; i < count; i++){
+                var listLength = document.querySelectorAll("ol#list > li").length;
+                var li = document.createElement("li");
+                var text = document.createTextNode("텍스트"+(listLength+1));
+                li.append(text);
+                ol.append(li);
+            }
+        },false);
     </script>
 </body>
 

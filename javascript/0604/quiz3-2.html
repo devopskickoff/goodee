@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p><h2>다음 중 대한민국의 수도는?</h2></p>
+        <input type="radio" name="radio1" id="ok1">서울 <br>
+        <input type="radio" name="radio1" id="ok2">대전 <br>
+        <input type="radio" name="radio1" id="ok3">대구 <br>
+        <input type="radio" name="radio1" id="ok4">부산 <br>
+        <button id="btn">평가</button>    
+    <div id="v3"></div>
+        <script>
+            
+            document.querySelector("#btn").addEventListener("click", function(){
+                if (document.getElementById("ok1").checked == true) {
+                    document.getElementById("v3").innerHTML = `<h1>정답입니다</h1>`;
+                }
+                else if (document.getElementById("ok1").checked != true) {
+                    document.getElementById("v3").innerHTML = `<h1>틀렸습니다</h1>`;
+                }
+            }, false);
+        </script>
+</body>
+</html>

@@ -20,6 +20,7 @@
         var result = document.getElementById("result");
         document.getElementById("check").onclick = function(){
             var answer = document.getElementsByName("answer");
+            console.dir(answer);
             
             for(var i = 0; i < answer.length; i++){
                 if(answer[i].checked==true){

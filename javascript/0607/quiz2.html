@@ -9,18 +9,27 @@
 </head>
 
 <body>
-    답1<input type="radio" name="answer" id="v1" value="1">
-    답2<input type="radio" name="answer" id="v2" value="2">
-    답3<input type="radio" name="answer" id="v3" value="3">
-    답4<input type="radio" name="answer" id="v4" value="4">
-    <button id="click">채점</button>
+    <h3>문제1</h3>
+    답1<input type="radio" name="answer" value="1"><br>
+    답2<input type="radio" name="answer" value="2"><br>
+    답3<input type="radio" name="answer" value="3"><br>
+    답4<input type="radio" name="answer" value="4"><br>
+    <input type="submit" id="click" value="채점">
+    <div id="content"></div>
     <script>
-        var rightAnswer = 3;
-        document.querySelector("#click").addEventListener("click", function () {
-            var el = document.getElementsByName("answer");
-            console.dir(el);
-
-        }, false);
+        var correctAnswer = 3;
+        var checkedAnswer = 0;
+        document.getElementById("click").onclick = function () {
+            var answer = document.getElementsByName("answer");
+            var content = document.getElementById("content");
+            for(var i = 0; i < answer.length; i++){
+                if(answer[i].checked==true){
+                    checkedAnswer = answer[i].value;
+                }
+            }
+           content.innerHTML = `${correctAnswer==checkedAnswer?"맞았다":"틀렸다"}`;            
+           
+        }
     </script>
 </body>
 
