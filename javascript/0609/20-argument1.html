@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function func1(arg1, arg2){
+            // console.log(arg1, arg2);
+            // console.log(arguments);
+            //error // 유사배열이라 어레이 함수 사용불가
+            // arguments.forEach(element => {
+            //     console.log(element);
+            // });
+            for(let i = 0; i < arguments.length; i++){
+                console.log(arguments[i]);
+            }
+        }
+        
+        // func1();
+        // func1(1);
+        // func1(1,2);
+        func1(1,2,3);
+    </script>
+</body>
+</html>

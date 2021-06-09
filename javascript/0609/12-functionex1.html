@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pic {
+            width: 200px;
+            height: 200px;
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="pic"></div>
+    <button onclick="changeColor('red');">버튼1</button>
+    <button onclick="changeColor('green');">버튼1</button>
+    <button onclick="changeColor('blue');">버튼1</button>
+
+    <script>
+    function changeColor(col){
+        document.querySelector(".pic").style.backgroundColor = col;
+    }
+
+        // document.getElementById("b1").addEventListener("click",changeColor("red"),false);
+        // document.getElementById("b2").addEventListener("click",changeColor("blue"),false);
+        // document.getElementById("b3").addEventListener("click",changeColor("green"),false);        
+</script>
+</body>
+</html>

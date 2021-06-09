@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        console.log(a());
+        console.log(b()); //error
+        console.log(c()); //error
+        // console.log(b); //undefined
+        // console.log(c); //undefined
+
+
+        //함수선언문 에러 없음 호이스팅적용
+        function a() {
+            return 'a';
+        }
+
+        //함수표현식 에러발생 호이스팅적용 안됨
+        var b = function bb() {
+            return 'b';
+        }
+
+        var c = function () {
+            return 'c';
+        }
+
+
+    </script>
+</body>
+
+</html>

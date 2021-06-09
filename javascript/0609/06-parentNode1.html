@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>americano</li>
+        <li>cafemoca</li>
+        <li id="myli">coffee</li>
+        <li>coldbrew</li>
+        <li>icetea</li>
+        <li>latte</li>
+    </ul>
+    <ul>
+        <li>짜장면</li>
+        <li>짬뽕</li>
+        <li>탕수육</li>
+        <li>팔보채</li>
+    </ul>
+    <button id="btn">버튼</button>
+    <p id="content"></p>
+    <script>
+        document.getElementById("btn").addEventListener("click", function(){
+
+            //var x = document.getElementById("myli").parentNode.nodeName; //ul
+            // var x = document.getElementById("myli").parentNode; //li
+            // document.getElementById("content").innerHTML = x.nodeType;
+
+            // var c = document.getElementsByTagName("ul")[0].firstChild.nextSibling;
+            // document.getElementById("content").innerHTML = c.nodeName; //LI
+            // var c = document.getElementsByTagName("ul")[0].firstElementChild;
+            // document.getElementById("content").innerHTML = c.textContent;
+            // var c = document.getElementsByTagName("ul")[0].lastElementChild;
+            // document.getElementById("content").innerHTML = c.textContent;
+            
+            // 나하고 동일선상에 있는 요소중에서 이전에 있는 요소를 찾겠다.
+            // var c = document.getElementById("myli").previousElementSibling;
+            
+            // var c = document.getElementById("myli").nextElementSibling;
+            // console.log(c.textContent);
+            // var c = document.getElementById("myli").parentElement;
+            // document.getElementById("content").innerHTML = c.nodeName;
+            // var c = document.getElementsByTagName("ul")[0].children;
+            // document.getElementById("content").innerHTML = c.length;
+            var c = document.getElementById("myli").parentElement.nextElementSibling.firstElementChild;
+            
+
+        }, false);
+    </script>
+</body>
+</html>
