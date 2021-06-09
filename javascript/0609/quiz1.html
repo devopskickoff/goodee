@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <ul>
+            <li><label>아이템1</label><input type="checkbox"></li>
+            <li><label>아이템2</label><input type="checkbox"></li>
+            <li><label>아이템3</label><input type="checkbox"></li>
+            <li><label>아이템4</label><input type="checkbox"></li>
+            <li><label>아이템5</label><input type="checkbox"></li>
+        </ul>
+        <ul>
+            <li><label>아이템6</label><input type="checkbox"></li>
+            <li><label>아이템7</label><input type="checkbox"></li>
+            <li><label>아이템8</label><input type="checkbox"></li>
+            <li><label>아이템9</label><input type="checkbox"></li>
+            <li><label>아이템10</label><input type="checkbox"></li>
+        </ul>
+        <button id="btnA">A.ul1위에서 ul2위로</button>
+        <button id="btnB">B.ul1위에서 ul2아래로</button>
+        <button id="btnC">C.ul1아래서 ul2위로</button>
+        <button id="btnD">D.ul1아래서 ul2아래로</button>
+        <button id="btnE">E.ul2위에서 ul1위로</button>
+        <button id="btnF">F.ul2위에서 ul1아래로</button>
+        <button id="btnG">G.ul2아래서 ul1위로</button>
+        <button id="btnH">H.ul2아래서 ul1아래로</button>
+        <button id="btnI">삭제</button>
+        <input type="text" id="inputText"><button id="btnJ">수정</button>
+    </div>
+
+    <script>
+        document.getElementById("btnA").addEventListener("click", function () {
+            var el1 = document.getElementsByTagName("ul")[0].firstElementChild;
+            var el2 = document.getElementsByTagName("ul")[1].firstElementChild;
+            el2.before(el1);
+
+        });
+
+        document.getElementById("btnB").addEventListener("click", function () {
+            var el1 = document.getElementsByTagName("ul")[0].firstElementChild;
+            var el2 = document.getElementsByTagName("ul")[1].lastElementChild;
+            el2.after(el1);
+        });
+
+        document.getElementById("btnC").addEventListener("click", function () {
+            var ul1 = document.getElementsByTagName("ul")[0].lastElementChild;
+            var ul2 = document.getElementsByTagName("ul")[1].firstElementChild;
+            ul2.before(ul1);
+        });
+
+        document.getElementById("btnD").addEventListener("click", function () {
+            var ul1 = document.getElementsByTagName("ul")[0].lastElementChild;
+            var ul2 = document.getElementsByTagName("ul")[1].lastElementChild;
+            ul2.after(ul1);
+        });
+
+        document.getElementById("btnE").addEventListener("click", function () {
+            var ul1 = document.getElementsByTagName("ul")[0].firstElementChild;
+            var ul2 = document.getElementsByTagName("ul")[1].firstElementChild;
+            ul1.before(ul2);
+        });
+
+        document.getElementById("btnF").addEventListener("click", function () {
+            var ul1 = document.getElementsByTagName("ul")[0].lastElementChild;
+            var ul2 = document.getElementsByTagName("ul")[1].firstElementChild;
+            ul1.after(ul2);
+        });
+
+        document.getElementById("btnG").addEventListener("click", function () {
+            var ul1 = document.getElementsByTagName("ul")[0].firstElementChild;
+            var ul2 = document.getElementsByTagName("ul")[1].lastElementChild;
+            ul1.before(ul2);
+        });
+
+        document.getElementById("btnH").addEventListener("click", function () {
+            var ul1 = document.getElementsByTagName("ul")[0].lastElementChild;
+            var ul2 = document.getElementsByTagName("ul")[1].lastElementChild;
+            ul1.after(ul2);
+        });
+
+        document.getElementById("btnI").addEventListener("click", function () {
+            var checkboxes = document.querySelectorAll("input[type=checkbox]");
+            var array = [];
+            for (var i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].checked === true) {
+                    array.push(checkboxes[i].parentElement);
+                }
+            }
+            array.forEach(element => {
+                element.remove();
+            });
+        });
+
+        document.getElementById("btnJ").addEventListener("click", function () {
+            var checkboxes = document.getElementsByTagName("input");
+            var text = document.getElementById("inputText").value;
+            for (var i = 0; i < checkboxes.length; i++) {
+                if (checkboxes[i].type == "checkbox" && checkboxes[i].checked == true) {
+                    checkboxes[i].previousElementSibling.innerHTML = text;
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>
