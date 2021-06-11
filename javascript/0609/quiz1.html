@@ -91,24 +91,33 @@
             ul1.after(ul2);
         });
 
+        // document.getElementById("btnI").addEventListener("click", function () {
+        //     var checkboxes = document.querySelectorAll("input[type=checkbox]");
+        //     var array = [];
+        //     for (var i = 0; i < checkboxes.length; i++) {
+        //         if (checkboxes[i].checked) {
+        //             array.push(checkboxes[i].parentElement);
+        //         }
+        //     }
+        //     array.forEach(element => {
+        //         element.remove();
+        //     });
+        // });
+        
         document.getElementById("btnI").addEventListener("click", function () {
             var checkboxes = document.querySelectorAll("input[type=checkbox]");
-            var array = [];
-            for (var i = 0; i < checkboxes.length; i++) {
-                if (checkboxes[i].checked === true) {
-                    array.push(checkboxes[i].parentElement);
+            for(const item in checkboxes){
+                if(checkboxes[item].checked){
+                checkboxes[item].parentElement.remove();
                 }
             }
-            array.forEach(element => {
-                element.remove();
-            });
-        });
+        },false);
 
         document.getElementById("btnJ").addEventListener("click", function () {
-            var checkboxes = document.getElementsByTagName("input");
+            var checkboxes = document.querySelectorAll("input[type=checkbox]");
             var text = document.getElementById("inputText").value;
             for (var i = 0; i < checkboxes.length; i++) {
-                if (checkboxes[i].type == "checkbox" && checkboxes[i].checked == true) {
+                if (checkboxes[i].checked) {
                     checkboxes[i].previousElementSibling.innerHTML = text;
                 }
             }

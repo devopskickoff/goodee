@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img id="image" width="" height="" src="img/prod1.jpg" alt="">
+    <p id="p1"></p>
+    <script>
+        // document.getElementById("p1").innerHTML = document.getElementById("image").src;
+        // document.getElementById("image").src = "img/prop3.jpg";
+        // document.getElementById("p1").innerText = document.getElementById("image").attributes[1].name; //src
+        // document.getElementById("p1").innerText = document.getElementById("image").attributes[1].value; //img/prod1.jpg
+        // document.getElementById("p1").innerText = document.getElementById("image").getAttribute("src"); 
+
+        document.getElementById("image").setAttribute("width","200px");
+        document.getElementById("image").setAttribute("height","200px");
+
+        // document.getElementById("image").attributes.width.value = "400px";
+        // document.getElementById("image").attributes.height.value = "100px";
+        document.getElementById("image").removeAttribute("alt");
+        console.log(document.getElementById("image").hasAttribute("width"));
+    </script>
+</body>
+</html>
