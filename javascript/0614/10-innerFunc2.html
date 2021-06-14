@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function parent(){
+            var a = 100;
+
+            // var child = function (){
+            //     console.log(a);
+            // }
+
+            // return child;
+            return function(){
+                console.log(a);
+            }
+        }
+        var inner = parent();
+        console.dir(inner);
+        inner(); // 100; => 클로저
+
+        // var inner = function (){ console.log(a);}
+
+       function aaa(){
+           console.log("aaa");
+           return function(){
+               console.log("ccc");
+           };
+       }
+       var bbb = aaa();
+    //    var aaa = function(){
+    //        console.log("aaa");
+    //    }
+    </script>
+</body>
+</html>

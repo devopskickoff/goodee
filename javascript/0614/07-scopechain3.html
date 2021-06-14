@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // 인자로 받은 function은 스코프체이닝 되지 않는다.
+        // printValue속 value는 전역변수인 value의 valu1 값이 된다.
+        var value = "value1";
+
+        function printValue(){
+            return value;
+        }
+
+        function printFunc(func){
+            var value = "value2";
+            console.log(func());
+            console.dir(func);
+        }
+
+        printFunc(printValue); //value1
+
+
+        // function printValue2(x,y){
+        //     return x+y;
+        // }
+
+        // function func2 (func){
+        //     return func(1,3);
+        // }
+        // console.log(func2(printValue2));
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <div class="box" style="width: 100px; height: 100px; background: green;"></div>
+
+  <script>
+    // Box Color Toggler
+    const box = document.querySelector('.box');
+
+    const toggleColor = (function () {
+      let isGreen = true;
+      let index = 0;
+      // 클로저 반환
+      return function () {
+        box.style.background = isGreen ? 'red' : 'green';
+        // 상태 변경
+        isGreen = !isGreen;
+        index++;
+        console.log(index);
+      };
+    })();
+    // 박스 클릭 이벤트
+    box.addEventListener('click', toggleColor);
+  </script>
+</body>
+</html>
