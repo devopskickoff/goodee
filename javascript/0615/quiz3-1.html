@@ -25,7 +25,10 @@
         
         $(function(){
             $("#btn").click(function(){
-                alert("Test");
+                var var1 = $("#var1").val();
+                var var2 = $("#var2").val();
+                var result = (var1 == var2) ? "같다" : (var1>var2)?"크다":"작다";
+                alert(result);
             });
         });
 

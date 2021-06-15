@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+</head>
+
+<body>
+    <input type="text" id="var1">
+    <input type="text" id="var2">
+    <button id="add">더하기</button>
+    <button id="sub">빼기</button>
+    <button id="mul">곱하기</button>
+    <button id="div">나누기</button>
+
+    <script>
+
+        $(function () {
+            var var1;
+            var var2;
+            
+            function getElement() {
+                var1 = parseInt($("#var1").val());
+                var2 = parseInt($("#var2").val());
+            }
+
+            $("#add").click(function () {
+                getElement();
+                alert(`${var1 + var2}`);
+            });
+
+            // sub
+            $("#sub").click(function () {
+                getElement();
+                alert(`${var1 - var2}`);
+            });
+
+            // mul
+            $("#mul").click(function () {
+                getElement();
+                alert(`${var1 * var2}`);
+            });
+
+            // div
+            $("#div").click(function () {
+                getElement();
+                alert(`${var1 / var2}`);
+            });
+        });
+    </script>
+</body>
+
+</html>
