@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // this가 global을 가리키는 경우
+        window.alert("이건 alert");
+        window.setTimeout(function(){
+            console.log("2초뒤에 실행");
+        }, 2000);
+        //1.this가 글로벌에서 쓰일 경우
+        window.console.log(this);
+
+        //2.this가 일반함수에서 쓰일경우
+        function abc(){
+            console.log(this);
+        }
+        abc();
+    </script>
+</body>
+</html>

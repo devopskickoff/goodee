@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1.내부 함수에서의 this
+        function parent(){
+            var a = 1;
+            var b = 2;
+            function child(){
+                console.log(this); //window
+            }
+            child();
+        }
+        parent();
+
+        //2.콜백함수에서의 this
+        function callFunc(callback){
+            callback();
+        }
+
+        function callback(){
+            console.log(this); //window
+        }
+
+        callFunc(callback);
+
+        //3.객체 내부의 메서드에서 콜백함수로 this를 출력하는경우
+        // => document.getEid().addEvent();
+        let obj1 = {
+            a: 123,
+            funcA: function(callback){
+                callback();
+            }
+        }
+        obj1.funcA(callback); //window
+    </script>
+</body>
+</html>
