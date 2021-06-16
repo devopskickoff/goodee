@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+</head>
+<body>
+    <script>
+        $(function(){
+            var arr1 = [
+                {"no":"1","name":"aaa"},
+                {"no":"2","name":"bbb"},
+                {"no":"3","name":"ccc"},
+                {"no":"4","name":"ddd"},
+                {"no":"5","name":"eee"}
+            ];
+
+            // var arr2 = $.map(arr1, function(a){
+            //     return a.no+"번";
+            // });
+
+            // console.log(arr2);
+
+            // var arr3 = $.grep(arr1, function(a){
+            //     return (a.no==1);
+            // });
+
+            // console.log(arr3);
+
+            var arr3 = $.map(arr1, function(a){
+                return(a.no < "3");
+            });
+
+            console.log(arr3);
+
+            var arr4 = $.grep(arr1, function(a){
+                return(a.no < "3");
+            });
+
+            console.log(arr4);
+
+
+        });
+    </script>
+</body>
+</html>

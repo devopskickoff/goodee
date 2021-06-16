@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(function(){
+            // $("li:first").css("color","red");
+            $("li").first().css("color","red");
+            // $("li:last").css("color","blue");
+            $("li").last().css("color","blue");
+            $("li:odd").css("text-decoration","overline");
+            $("li:even").css("text-decoration","underline");
+            $("li:nth-child(3)").css("border","5px dotted green");
+            $("li:nth-child(3n)").css("font-family","궁서");
+            //각 ul안에서 뒤에서 두번째 
+            $("li:nth-last-of-type(2)").css("background-color","blue");
+            //해당 블록안에 요소가 하나밖에 존재하지 않을경우
+            $("li:only-child").css("color","gray");
+            $("li").eq(0).css("broder","5px dotted green");
+            //총 인덱스11보다 큰애들을 불러온다 greater than
+            $("li:gt(11)").css("transform","rotateZ(-5deg)");
+            //총 인덱스가 2보다 작은애들 less than
+            $("li:lt(2)").css("transform","translateX(2rem)");
+            $("li").slice(2,5).css("color","hotpink");
+        });
+    </script>
+</head>
+<body>
+    
+    <ul>
+        <li>아이템1</li>
+        <li>아이템2</li>
+        <li>아이템3</li>
+        <li>아이템4</li>
+        <li>아이템5</li>
+        <li>아이템6</li>
+    </ul>
+    <ul>
+        <li>아이템1</li>
+        <li>아이템2</li>
+        <li>아이템3</li>
+        <li>아이템4</li>
+        <li>아이템5</li>
+        <li>아이템6</li>
+    </ul>
+    <ul>
+        <li>아이템1</li>
+        <li>아이템2</li>
+    </ul>
+</body>
+</html>
